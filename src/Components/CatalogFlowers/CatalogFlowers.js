@@ -116,7 +116,7 @@ function CatalogFlowers({ page }) {
         >
           <p>Букеты из {item} розы</p>
           <span>
-            <i class="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           </span>
         </div>
       );
@@ -164,7 +164,7 @@ function CatalogFlowers({ page }) {
         {renderCountFilters()}
         <div className="show-more-btn">
           <p>Показать еще</p>
-          <i class="fa-solid fa-angle-down"></i>
+          <i className="fa-solid fa-angle-down"></i>
         </div>
       </div>
 
@@ -176,7 +176,7 @@ function CatalogFlowers({ page }) {
 
       <div className="show-all-btn">
         <button>
-          <i class="fa-solid fa-rotate-right"></i>
+          <i className="fa-solid fa-rotate-right"></i>
           <p>Показать еще</p>
         </button>
       </div>

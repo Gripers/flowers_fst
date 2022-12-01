@@ -44,7 +44,7 @@ function Contact() {
             <div className="card-footer">
               <div className="footer-item">
                 <span>
-                  <i class="fa-solid fa-phone"></i>
+                  <i className="fa-solid fa-phone"></i>
                 </span>
                 <div className="details">
                   <label>Телефон:</label>
@@ -53,7 +53,7 @@ function Contact() {
               </div>
               <div className="footer-item">
                 <span>
-                  <i class="fa-solid fa-location-dot"></i>
+                  <i className="fa-solid fa-location-dot"></i>
                 </span>
                 <div className="details">
                   <label>GPS:</label>
@@ -81,7 +81,7 @@ function Contact() {
             <div className="card-footer">
               <div className="footer-item">
                 <span>
-                  <i class="fa-solid fa-phone"></i>
+                  <i className="fa-solid fa-phone"></i>
                 </span>
                 <div className="details">
                   <label>Телефон:</label>
@@ -90,7 +90,7 @@ function Contact() {
               </div>
               <div className="footer-item">
                 <span>
-                  <i class="fa-solid fa-location-dot"></i>
+                  <i className="fa-solid fa-location-dot"></i>
                 </span>
                 <div className="details">
                   <label>GPS:</label>

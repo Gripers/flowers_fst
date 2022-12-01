@@ -14,6 +14,7 @@ import Contact from "./Pages/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Categories from "./Pages/Categories/Categories";
 import Flower from "./Pages/Flower/Flower";
+import Cart from "./Pages/Cart/Cart";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/flower/:id" element={<Flower />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

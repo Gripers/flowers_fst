@@ -6,7 +6,6 @@ import CatalogFilters from "../../Components/CataogFilters/CatalogFilters";
 import "./Catalog.scss";
 
 function Catalog({ page }) {
-  console.log("Render");
 
   return (
     <div className="catalog container">

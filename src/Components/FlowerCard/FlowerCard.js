@@ -181,7 +181,7 @@ function FlowerCard({ id }) {
         <div className="flowerCard-detailsBox">
           <h1 className="box-header">{flower.title}</h1>
           <div className="stars">
-            <i class="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
             <span>
               4.0 <span className="reviews">(15 отзывов)</span>
             </span>
@@ -244,7 +244,7 @@ function FlowerCard({ id }) {
             </div>
             <div className="discount-info">
               <p>скидка от кол-ва</p>
-              <i class="fa-solid fa-circle-exclamation"></i>
+              <i className="fa-solid fa-circle-exclamation"></i>
               <div className="info-floating-box">Скидка от количества</div>
             </div>
           </div>
@@ -255,14 +255,14 @@ function FlowerCard({ id }) {
               <span>-</span>
             </button>
             <button>
-              <i class="fa-solid fa-bag-shopping"></i>
+              <i className="fa-solid fa-bag-shopping"></i>
               <span>Купить</span>
               <div className="one-click__btn">
                 <p>Купить в 1 клик</p>
               </div>
             </button>
             <button>
-              <i class="fa-regular fa-heart"></i>
+              <i className="fa-regular fa-heart"></i>
             </button>
           </div>
           <div className="composition-infos">

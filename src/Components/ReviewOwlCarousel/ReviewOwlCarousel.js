@@ -44,7 +44,7 @@ function ReviewOwlCarousel({ id }) {
         const renderStars = () => {
           let newArray = [];
           for (let i = 0; i < item.star; i++) {
-            newArray.push(<i class="fa-solid fa-star"></i>);
+            newArray.push(<i className="fa-solid fa-star"></i>);
           }
           return newArray;
         };
@@ -94,7 +94,7 @@ function ReviewOwlCarousel({ id }) {
             }}
             className="nav-prev"
           >
-            <i class="fa-solid fa-caret-left"></i>
+            <i className="fa-solid fa-caret-left"></i>
           </div>
           <div
             onClick={() => {
@@ -102,7 +102,7 @@ function ReviewOwlCarousel({ id }) {
             }}
             className="nav-next"
           >
-            <i class="fa-solid fa-caret-right"></i>
+            <i className="fa-solid fa-caret-right"></i>
           </div>
         </>
       ) : null}

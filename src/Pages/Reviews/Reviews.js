@@ -34,7 +34,7 @@ const renderReviews = (array) => {
   return array.map((item) => {
     let golden = [];
     for (var i = 0; i < item.stars; i++) {
-      golden.push(<i class="fa-solid fa-star"></i>);
+      golden.push(<i className="fa-solid fa-star"></i>);
     }
     return (
       <div key={uuid()} className="review-item">

@@ -129,7 +129,7 @@ function CatalogFilters() {
           className={filterClassName}
         >
           <span>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </span>
           <p>{item}</p>
         </div>
@@ -152,7 +152,7 @@ function CatalogFilters() {
           className={heightClassName}
         >
           <span>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </span>
           <p>{item}</p>
         </div>
@@ -188,7 +188,7 @@ function CatalogFilters() {
           className={ingrClassName}
         >
           <span>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </span>
           <p>{item}</p>
         </div>
@@ -224,7 +224,7 @@ function CatalogFilters() {
           className={specialClassNames}
         >
           <span>
-            <i class="fa-solid fa-check"></i>
+            <i className="fa-solid fa-check"></i>
           </span>
           <p>{item}</p>
         </div>

@@ -54,24 +54,24 @@ function SingleCatalogItem({
               autoplay
               autoplayTimeout={5000}
             >
-              <div class="item">
+              <div className="item">
                 <img src={product_image} alt="" />{" "}
               </div>
-              <div class="item">
+              <div className="item">
                 <img src={product_image} alt="" />{" "}
               </div>
-              <div class="item">
+              <div className="item">
                 <img src={product_image} alt="" />
               </div>
             </OwlCarousel>
             <div className="status-box">
               <div className="img-box">
-                <i class="fa-regular fa-heart"></i>
+                <i className="fa-regular fa-heart"></i>
                 <i className="fa-solid fa-heart"></i>
               </div>
               <div className="img-box">
                 <Link to={`/flower/${id}`}>
-                  <i class="fa-regular fa-eye"></i>
+                  <i className="fa-regular fa-eye"></i>
                 </Link>
               </div>
             </div>
@@ -80,11 +80,11 @@ function SingleCatalogItem({
             </div>
             <div className="flower-size">
               <div className="width">
-                <i class="fa-solid fa-arrows-left-right"></i>
+                <i className="fa-solid fa-arrows-left-right"></i>
                 <p>35 см</p>
               </div>
               <div className="height">
-                <i class="fa-solid fa-arrows-left-right"></i>
+                <i className="fa-solid fa-arrows-left-right"></i>
                 <p>50 см</p>
               </div>
             </div>
@@ -96,7 +96,7 @@ function SingleCatalogItem({
             ) : null}
             <div className="rating-box">
               <div className="ratings">
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
                 <span>
                   <span>
                     {review_avg.star__avg ? review_avg.star__avg : null}{" "}
@@ -105,7 +105,7 @@ function SingleCatalogItem({
                 </span>
               </div>
               <div className="ratings-delivery">
-                <i class="fa-solid fa-truck"></i>
+                <i className="fa-solid fa-truck"></i>
                 <span>
                   <span>150</span> мин
                 </span>
@@ -123,12 +123,12 @@ function SingleCatalogItem({
             </div>
             {preOrder ? (
               <button className="order">
-                <i class="fa-solid fa-arrow-left"></i>
+                <i className="fa-solid fa-arrow-left"></i>
                 <p>Предзаказ</p>
               </button>
             ) : (
               <button>
-                <i class="fa-solid fa-bag-shopping"></i>
+                <i className="fa-solid fa-bag-shopping"></i>
                 <p>В корзину</p>
               </button>
             )}
