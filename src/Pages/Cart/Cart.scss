@@ -83,6 +83,8 @@
 }
 .cart_main .cart__right .total ul li .free {
   color: #222a46;
+  font-family: TTNormsRegular;
+  font-weight: 400;
 }
 
 .cart_main .cart__right .total .code {
@@ -171,6 +173,17 @@
   cursor: pointer;
   border: 1px solid #e5e5e5;
   border-top: none;
+  justify-content: space-between;
+}
+.cart_main .cart__left .items_cart .item .item_photo_title {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+}
+.cart_main .cart__left .items_cart .item .item_total_prices {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
 }
 
 .cart_main .cart__left .items_cart .item img {
