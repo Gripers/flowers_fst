@@ -86,7 +86,7 @@ const handleListOpened = () => {
                         <button className="info-social__list-btn"></button>
                     </li>
                     <li className="info-social__item info-social__item--active">
-                        <Link className="info-social__item-link"></Link>
+                        <Link to={"/cart"} className="info-social__item-link"></Link>
                         <span className="info-social__item-span">
                             <span className="count">2</span>
                             16 500 ₽</span>
