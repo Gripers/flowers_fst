@@ -1,0 +1,65 @@
+.payment {
+  padding-bottom: 80px;
+
+  .wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 26px;
+
+    .left {
+      width: 20%;
+    }
+
+    .right {
+      width: 100%;
+
+      .content {
+        display: grid;
+        gap: 20px;
+
+        .payment_methods {
+          display: grid;
+
+          div {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            p {
+              font-weight: bold;
+            }
+          }
+        }
+
+        .payment_cards {
+          display: flex;
+          gap: 20px;
+          justify-content: space-between;
+
+          .payment_card {
+            width: 100%;
+            border: 1px solid #d0d2d7;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .payment .wrapper {
+    display: grid;
+
+    .left {
+      width: 100%;
+    }
+  }
+}

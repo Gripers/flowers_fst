@@ -1,1 +1,1 @@
-export const apiBaseUrl = "https://minimer07.pythonanywhere.com/";
+export const apiBaseUrl = 'https://flowerss.pythonanywhere.com';

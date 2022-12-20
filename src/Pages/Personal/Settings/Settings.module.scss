@@ -1,0 +1,39 @@
+.settings_container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding-bottom: 80px;
+
+  .left {
+    width: 30%;
+  }
+
+  .right {
+    width: 100%;
+    display: grid;
+
+    h1 {
+      margin-bottom: 26px;
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+
+      input {
+        border: 1px solid #d0d2d7;
+        border-radius: 5px;
+        outline: none;
+        padding: 10px;
+      }
+
+      button {
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: #0093a2;
+        padding: 10px;
+      }
+    }
+  }
+}

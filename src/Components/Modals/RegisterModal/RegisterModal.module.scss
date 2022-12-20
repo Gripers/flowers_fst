@@ -1,0 +1,28 @@
+.register_modal {
+  min-width: 30%;
+  border-radius: 20px;
+
+  h3 {
+    text-align: center;
+  }
+
+  form {
+    display: grid;
+    gap: 10px;
+
+    input {
+      border: 1px solid #d0d2d7;
+      border-radius: 5px;
+      outline: none;
+      padding: 10px;
+    }
+
+    button {
+      border: none;
+      border-radius: 5px;
+      color: white;
+      background-color: #0093a2;
+      padding: 10px;
+    }
+  }
+}

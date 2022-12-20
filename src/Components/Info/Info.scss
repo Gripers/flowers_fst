@@ -99,6 +99,11 @@
 
 .info__item-link--unique {
   display: flex;
+
+  button {
+    border: none;
+    background: none;
+  }
 }
 
 .info__item-spn {

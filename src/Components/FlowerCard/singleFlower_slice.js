@@ -1,6 +1,6 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { useHttp } from "../../hooks/useHttp";
-import { apiBaseUrl } from "../../config";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { useHttp } from '../../hooks/useHttp';
+import { apiBaseUrl } from '../../config';
 
 const initialState = {
   flower: {},
@@ -12,7 +12,7 @@ const initialState = {
 };
 
 export const fetchFlower = createAsyncThunk(
-  "singleFlower/fetchFlower",
+  'singleFlower/fetchFlower',
   async (id) => {
     const { request } = useHttp();
     return await request(`${apiBaseUrl}/products/v1/product_api_view/${id}/`);
@@ -20,7 +20,7 @@ export const fetchFlower = createAsyncThunk(
 );
 
 const flowerSlice = createSlice({
-  name: "singleFlower",
+  name: 'singleFlower',
   initialState,
   reducers: {
     setActiveImageIndex: (state, action) => {
@@ -35,6 +35,13 @@ const flowerSlice = createSlice({
     setActiveGreenBtnIndex: (state, action) => {
       state.activeGreenBtnIndex = action.payload;
     },
+    incrementFlowerQuantity: (state) => {
+      state.flower.count++;
+    },
+    decrementFlowerQuantity: (state) => {
+      // eslint-disable-next-line no-unused-expressions
+      state.flower.count > 1 ? state.flower.count-- : null;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -46,7 +53,7 @@ const flowerSlice = createSlice({
         state.loading = false;
       })
       .addCase(fetchFlower.rejected, (state) => {
-        state.loading = "error";
+        state.loading = 'error';
       });
   },
 });
@@ -57,5 +64,7 @@ export const {
   setActiveGreenBtnIndex,
   setActiveLengthBtnIndex,
   setActivePackageBtnIndex,
+  incrementFlowerQuantity,
+  decrementFlowerQuantity,
 } = actions;
 export default reducer;

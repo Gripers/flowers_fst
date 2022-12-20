@@ -1,24 +1,24 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { useHttp } from "../../hooks/useHttp";
-import { apiBaseUrl } from "../../config";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { useHttp } from '../../hooks/useHttp';
+import { apiBaseUrl } from '../../config';
 
 const initialState = {
   flowers: [],
   loading: false,
-  activeSortFilter: "По популярности",
+  activeSortFilter: 'По популярности',
   activeCountFlowers: [],
 };
 
 export const fetchFlowers = createAsyncThunk(
-  "flowers/fetchFlowers",
+  'flowers/fetchFlowers',
   async () => {
     const { request } = useHttp();
-    return await request(`${apiBaseUrl}products/v1/product_api_view/`);
+    return await request(`${apiBaseUrl}/products/v1/product_api_view/`);
   }
 );
 
 const flowersSlice = createSlice({
-  name: "flowers",
+  name: 'flowers',
   initialState,
   reducers: {
     setActiveSortFilter: (state, action) => {
@@ -43,7 +43,7 @@ const flowersSlice = createSlice({
         state.loading = false;
       })
       .addCase(fetchFlowers.rejected, (state) => {
-        state.loading = "error";
+        state.loading = 'error';
       });
   },
 });

@@ -1,9 +1,11 @@
-import React from "react";
-import classNames from "classnames";
-import { v4 as uuid } from "uuid";
-import { useSelector, useDispatch } from "react-redux";
+import React from 'react';
+import classNames from 'classnames';
+import { v4 as uuid } from 'uuid';
+import { useSelector, useDispatch } from 'react-redux';
+import RangeSlider from 'react-range-slider-input';
+import 'react-range-slider-input/dist/style.css';
 
-import "./CatalogFilters.scss";
+import './CatalogFilters.scss';
 
 //import functions
 import {
@@ -19,7 +21,7 @@ import {
   removeIngredient,
   addPersonal,
   removePersonal,
-} from "./filters_slice";
+} from './filters_slice';
 
 function CatalogFilters() {
   const dispatch = useDispatch();
@@ -45,7 +47,6 @@ function CatalogFilters() {
     removeState = Function
   ) => {
     const index = array.findIndex((i) => i === item);
-    console.log(index);
     if (index >= 0) {
       return dispatch(removeState(index));
     } else {
@@ -54,9 +55,9 @@ function CatalogFilters() {
   };
 
   const renderBouquetFilters = () => {
-    const roses = ["Местные розы", "Эквадорские розы", "Кенийские розы"];
+    const roses = ['Местные розы', 'Эквадорские розы', 'Кенийские розы'];
     return roses.map((item, index) => {
-      const roseClassName = classNames("rose-item", {
+      const roseClassName = classNames('rose-item', {
         active: index + 1 === activeFlower,
       });
       return (
@@ -75,24 +76,24 @@ function CatalogFilters() {
 
   const renderColorFilters = () => {
     const colors = [
-      "red",
-      "blue",
-      "yellow",
-      "orange",
-      "pink",
-      "teal",
-      "violet",
-      "green",
-      "brown",
-      "purple",
-      "gray",
-      "white",
-      "chocolate",
-      "coral",
+      'red',
+      'blue',
+      'yellow',
+      'orange',
+      'pink',
+      'teal',
+      'violet',
+      'green',
+      'brown',
+      'purple',
+      'gray',
+      'white',
+      'chocolate',
+      'coral',
     ];
 
     return colors.map((item) => {
-      const colorClassNames = classNames("color-item", {
+      const colorClassNames = classNames('color-item', {
         active: item === activeColor,
       });
       return (
@@ -103,16 +104,16 @@ function CatalogFilters() {
           key={uuid()}
           className={colorClassNames}
         >
-          <div style={{ backgroundColor: item }} className="color"></div>
+          <div style={{ backgroundColor: item }} className='color'></div>
         </div>
       );
     });
   };
 
   const renderDiameterFilters = () => {
-    const filters = ["До 25 см", "26-40 см", "41-55 см", "Более 55 см"];
+    const filters = ['До 25 см', '26-40 см', '41-55 см', 'Более 55 см'];
     return filters.map((item) => {
-      const filterClassName = classNames("diameter-item rodeo", {
+      const filterClassName = classNames('diameter-item rodeo', {
         active: activeDiameter.includes(item),
       });
       return (
@@ -129,7 +130,7 @@ function CatalogFilters() {
           className={filterClassName}
         >
           <span>
-            <i class="fa-solid fa-check"></i>
+            <i class='fa-solid fa-check'></i>
           </span>
           <p>{item}</p>
         </div>
@@ -138,9 +139,9 @@ function CatalogFilters() {
   };
 
   const renderHeightFilters = () => {
-    const filters = ["До 45 см", "46-60 см", "61-75 см", "Более 75 см"];
+    const filters = ['До 45 см', '46-60 см', '61-75 см', 'Более 75 см'];
     return filters.map((item) => {
-      const heightClassName = classNames("height-item rodeo", {
+      const heightClassName = classNames('height-item rodeo', {
         active: activeLength.includes(item),
       });
       return (
@@ -152,7 +153,7 @@ function CatalogFilters() {
           className={heightClassName}
         >
           <span>
-            <i class="fa-solid fa-check"></i>
+            <i class='fa-solid fa-check'></i>
           </span>
           <p>{item}</p>
         </div>
@@ -162,16 +163,16 @@ function CatalogFilters() {
 
   const renderIngredientFilters = () => {
     const filters = [
-      "Тюльпаны",
-      "Эустомы",
-      "Хризантемы",
-      "Пионы",
-      "Герберы",
-      "Альстромерии",
+      'Тюльпаны',
+      'Эустомы',
+      'Хризантемы',
+      'Пионы',
+      'Герберы',
+      'Альстромерии',
     ];
 
     return filters.map((item) => {
-      const ingrClassName = classNames("ingr-item rodeo", {
+      const ingrClassName = classNames('ingr-item rodeo', {
         active: activeIngredients.includes(item),
       });
       return (
@@ -188,7 +189,7 @@ function CatalogFilters() {
           className={ingrClassName}
         >
           <span>
-            <i class="fa-solid fa-check"></i>
+            <i class='fa-solid fa-check'></i>
           </span>
           <p>{item}</p>
         </div>
@@ -198,16 +199,16 @@ function CatalogFilters() {
 
   const renderSpecailFilters = () => {
     const filters = [
-      "Маме",
-      "Жене",
-      "Коллеге",
-      "Дочери",
-      "Подруге",
-      "Начальнику",
+      'Маме',
+      'Жене',
+      'Коллеге',
+      'Дочери',
+      'Подруге',
+      'Начальнику',
     ];
 
     return filters.map((item) => {
-      const specialClassNames = classNames("special-item rodeo", {
+      const specialClassNames = classNames('special-item rodeo', {
         active: activePersonals.includes(item),
       });
       return (
@@ -224,7 +225,7 @@ function CatalogFilters() {
           className={specialClassNames}
         >
           <span>
-            <i class="fa-solid fa-check"></i>
+            <i class='fa-solid fa-check'></i>
           </span>
           <p>{item}</p>
         </div>
@@ -233,70 +234,70 @@ function CatalogFilters() {
   };
 
   return (
-    <div className="catalog-filters">
-      <div className="bouquet-filters">
-        <h5 className="subheader">Букеты из роз</h5>
-        <div className="bouqutes">{renderBouquetFilters()}</div>
+    <div className='catalog-filters'>
+      <div className='bouquet-filters'>
+        <h5 className='subheader'>Букеты из роз</h5>
+        <div className='bouqutes'>{renderBouquetFilters()}</div>
       </div>
 
-      <div className="cost-filters">
-        <h5 className="subheader">Цена</h5>
-        <div className="inputs-group">
+      <div className='cost-filters'>
+        <h5 className='subheader'>Цена</h5>
+        <div className='inputs-group'>
           <input
             value={minCost}
             onChange={(e) => {
               handleSetStates(e.target.value, setMinCost);
             }}
-            type="number"
+            type='number'
           />
           <input
             value={maxCost}
             onChange={(e) => {
               handleSetStates(e.target.value, setMaxCost);
             }}
-            type="number"
+            type='number'
           />
         </div>
-        <div className="cost-progress">
-          <div className="under-box">
-            <div className="progress-show__box">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-        <div className="cost-borders">
-          <span>от 500 ₽</span>
-          <span>до 45 500 ₽</span>
+
+        <div style={{ margin: '26px auto' }}>
+          <RangeSlider
+            onInput={(value) => {
+              handleSetStates(value[0], setMinCost);
+              handleSetStates(value[1], setMaxCost);
+            }}
+            min={0}
+            max={50000}
+            rangeSlideDisabled={true}
+            value={[minCost, maxCost]}
+          />
         </div>
       </div>
 
-      <div className="color-filters">
-        <h5 className="subheader">Цвета</h5>
-        <div className="colors">{renderColorFilters()}</div>
+      <div className='color-filters'>
+        <h5 className='subheader'>Цвета</h5>
+        <div className='colors'>{renderColorFilters()}</div>
       </div>
 
-      <div className="size-filters">
-        <h4 className="subheader">Размер</h4>
-        <h4 className="mini-subheader">Диаметр букета</h4>
-        <div className="diameters">{renderDiameterFilters()}</div>
-        <h4 className="mini-subheader">Высота букета</h4>
-        <div className="heights">{renderHeightFilters()}</div>
+      <div className='size-filters'>
+        <h4 className='subheader'>Размер</h4>
+        <h4 className='mini-subheader'>Диаметр букета</h4>
+        <div className='diameters'>{renderDiameterFilters()}</div>
+        <h4 className='mini-subheader'>Высота букета</h4>
+        <div className='heights'>{renderHeightFilters()}</div>
       </div>
 
-      <div className="ingredient-filters">
-        <div className="subheader-box">
-          <h4 className="subheader">Состав</h4>
-          <img src="" alt="" />
+      <div className='ingredient-filters'>
+        <div className='subheader-box'>
+          <h4 className='subheader'>Состав</h4>
+          <img src='' alt='' />
         </div>
-        <div className="ingredients">{renderIngredientFilters()}</div>
+        <div className='ingredients'>{renderIngredientFilters()}</div>
         <p>Показать все</p>
       </div>
 
-      <div className="special-filters">
-        <h4 className="subheader">Кому</h4>
-        <div className="specails">{renderSpecailFilters()}</div>
+      <div className='special-filters'>
+        <h4 className='subheader'>Кому</h4>
+        <div className='specails'>{renderSpecailFilters()}</div>
       </div>
     </div>
   );

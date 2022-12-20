@@ -1,0 +1,15 @@
+.selector_container {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #f2f3f5;
+  margin: 16px auto;
+  padding: 10px;
+
+  button {
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 10px;
+  }
+}

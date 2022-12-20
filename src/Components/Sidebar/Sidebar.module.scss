@@ -1,0 +1,17 @@
+.sidebar {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  border: 1px solid #d0d2d7;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .active {
+    color: #0093a2;
+    border-left: 2px solid #0093a2;
+  }
+
+  a {
+    padding: 10px 20px;
+  }
+}

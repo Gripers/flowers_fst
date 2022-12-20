@@ -1,0 +1,19 @@
+.sidebar_container {
+  width: 100%;
+  height: fit-content;
+
+  nav {
+    display: grid;
+    gap: 20px;
+    margin-top: 26px;
+
+    a {
+      font-size: 19px;
+      font-weight: bold;
+    }
+  }
+
+  .active {
+    color: #0093a2;
+  }
+}

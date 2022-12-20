@@ -1,10 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   activeFlower: null,
-  minCost: "",
-  maxCost: "",
-  activeColor: "",
+  minCost: 0,
+  maxCost: 30000,
+  activeColor: '',
   activeDiameter: [],
   activeLength: [],
   activeIngredients: [],
@@ -12,7 +12,7 @@ const initialState = {
 };
 
 const filterSlice = createSlice({
-  name: "filters",
+  name: 'filters',
   initialState,
   reducers: {
     setActiveFlower: (state, action) => {
