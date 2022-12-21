@@ -12,6 +12,7 @@ import { authApi } from './api/auth.api';
 import userSlice from './reducers/userSlice';
 import { userApi } from './api/user.api';
 import { orderApi } from './api/order.api';
+import orderSlice from './reducers/orderSlice';
 
 const store = configureStore({
   reducer: {
@@ -22,6 +23,7 @@ const store = configureStore({
     employees: employeesSlice,
     global: globalSlice,
     user: userSlice,
+    order: orderSlice,
     [authApi.reducerPath]: authApi.reducer,
     [userApi.reducerPath]: userApi.reducer,
     [orderApi.reducerPath]: orderApi.reducer,

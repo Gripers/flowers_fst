@@ -1,5 +1,5 @@
-export const logOut = (cookies) => {
+export const logOut = async (cookies, navigate) => {
   cookies.remove('refresh');
   cookies.remove('access');
-  window.location.reload();
+  navigate('/');
 };

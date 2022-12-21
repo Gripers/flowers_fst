@@ -1,21 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Cart.scss';
 import { useCart } from 'react-use-cart';
+import Cookies from 'universal-cookie';
 
-// Swiper connected!
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { useCreateOrderMutation } from '../../redux/api/order.api';
-import { useSelector } from 'react-redux';
 
 function Cart({ page }) {
   const [createOrder, { isLoading }] = useCreateOrderMutation();
   const { items, removeItem, emptyCart, updateItemQuantity } = useCart();
-  const user = useSelector((state) => state.user.userProfile);
+  const cookies = new Cookies();
+  const navigate = useNavigate();
 
   let total = 0;
 
@@ -23,12 +21,21 @@ function Cart({ page }) {
     event.preventDefault();
 
     const data = {
-      user: user.id,
+      orderitem: items.map((item) => {
+        return {
+          product: item.id,
+          count: item.quantity,
+        };
+      }),
     };
 
-    createOrder(data)
+    createOrder({ data: data, token: cookies.get('access') })
       .unwrap()
-      .then(() => {})
+      .then(() => {
+        alert('Благодарим за покупку');
+        emptyCart();
+        navigate('/');
+      })
       .catch(() => alert('Повторите попытку позже'));
   };
 

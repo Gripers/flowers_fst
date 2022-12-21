@@ -8,9 +8,12 @@ export const orderApi = createApi({
   }),
   endpoints: (build) => ({
     createOrder: build.mutation({
-      query: (data) => ({
+      query: ({ data, token }) => ({
         url: '/order/v1/order/create',
         method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
         body: data,
       }),
     }),

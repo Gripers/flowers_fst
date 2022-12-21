@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Sidebar.module.scss';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Cookies from 'universal-cookie';
 
@@ -9,6 +9,7 @@ import { logOut } from './s';
 
 const Sidebar = () => {
   const cookies = new Cookies();
+  const navigate = useNavigate();
   const user = useSelector((state) => state.user.userProfile);
 
   return (
@@ -39,7 +40,7 @@ const Sidebar = () => {
         >
           О скидках
         </NavLink>
-        <a href='' onClick={() => logOut(cookies)}>
+        <a href='' onClick={() => logOut(cookies, navigate)}>
           Выйти
         </a>
       </nav>
