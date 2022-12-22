@@ -25,10 +25,10 @@ const Info = (className) => {
         </time>
         <ul className='info__list'>
           <li>
-            <Link className='info__btn'>Доставка</Link>
+            <Link className='info__btn' to='/order'>Доставка</Link>
           </li>
           <li>
-            <Link className='info__btn'>Оплата</Link>
+            <Link className='info__btn' to='/payment'>Оплата</Link>
           </li>
           <li>
             <Link to={'/reviews'} className='info__btn'>
